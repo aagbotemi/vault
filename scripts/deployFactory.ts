@@ -17,8 +17,8 @@ async function main() {
 
 
     let clonedAddr = await vaultFactory.ClonedAddresses();
-    let clonedAddr1Result = await clonedAddr.wait().toString();
-    console.log("factory 1 cloned Address successfully: ", clonedAddr1Result);
+    // let clonedAddr1Result = await clonedAddr;
+    console.log("factory 1 cloned Address successfully: ", clonedAddr);
 
 
     console.log("////////////////////////////////////////////////////////");
@@ -33,8 +33,8 @@ async function main() {
     
 
     let clonedAddr2 = await vaultFactory.ClonedAddresses();
-    let clonedAddr2Result = await clonedAddr2.wait().toString();
-    console.log("factory 2 cloned Address successfully: ", clonedAddr2Result);
+    // let clonedAddr2Result = await clonedAddr2;
+    console.log("factory 2 cloned Address successfully: ", clonedAddr2);
 
 }
 
