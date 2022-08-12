@@ -15,19 +15,19 @@ async function main() {
   
   // -> To get beneficiary info
   const beneficiaryInfoTxn = await vault.connect(signer2).returnBeneficiaryInfo(1);
-  // const beneficiaryInfoTxnReciept = await beneficiaryInfoTxn.wait(); // 'wait' does not exist on type Struct
-  console.log("Beneficiary Info Log: ", beneficiaryInfoTxn);
+  const beneficiaryInfoTxnReciept = await beneficiaryInfoTxn;
+  console.log("Beneficiary Info Log: ", beneficiaryInfoTxnReciept);
 
   // -> To get the balance of the contract
   const getContractBalanceTxn = await vault.connect(signer1).getBalance();
-  // const getContractBalanceTxnReciept = await getContractBalanceTxn.wait(); // 'wait' does not exist on type 'BigNumber'
-  console.log("Contract Balance Log: ", getContractBalanceTxn);
+  const getContractBalanceTxnReciept = await getContractBalanceTxn;
+  console.log("Contract Balance Log: ", getContractBalanceTxnReciept);
 
 
   // -> get all beneficiary output
   const getAllBeneficiaryTxn = await vault.connect(signer1).getAllBeneficiary();
-  // const getAllBeneficiaryTxnReciept = await getAllBeneficiaryTxn.wait(); // 'wait' does not exist on type Struct
-  console.log("Get all beneficiary Log: ", getAllBeneficiaryTxn);
+  const getAllBeneficiaryTxnReciept = await getAllBeneficiaryTxn; 
+  console.log("Get all beneficiary Log: ", getAllBeneficiaryTxnReciept);
 
   
   // -> To get reverse the grant of a beneficiary
@@ -59,7 +59,7 @@ async function main() {
 
   // -> Waiting for 6 seconds before running withdraw in batch function
   // setTimeout(async() => {
-  //   const withdrawInBatchGrantTxn = await vault.connect(signer2).withdrawInBatch(1, 0.10000000000000000);
+  //   const withdrawInBatchGrantTxn = await vault.connect(signer2).withdrawInBatch(1, ethers.utils.parseEther("0.1"));
   //   const withdrawInBatchGrantTxnReciept = await withdrawInBatchGrantTxn.wait();
   //   console.log("Withdraw In Batch Grant Log: ", withdrawInBatchGrantTxnReciept);
   // }, 6000);
