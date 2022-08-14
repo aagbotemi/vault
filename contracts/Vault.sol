@@ -10,7 +10,7 @@ contract Vault {
 
 
     //*********** state variable **************//
-    address owner;
+    address public owner;
 
     enum Status {
         GRANT_GIVEN,
@@ -163,4 +163,7 @@ contract Vault {
             _bp[i] = _beneficiaryProperties[all[i]];
         }
     }
+
+    receive() external payable {}
+    fallback() external payable {}
 }

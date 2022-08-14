@@ -15,19 +15,19 @@ async function main() {
   
   // -> To get beneficiary info
   const beneficiaryInfoTxn = await vault.connect(signer2).returnBeneficiaryInfo(1);
-  const beneficiaryInfoTxnReciept = await beneficiaryInfoTxn;
-  console.log("Beneficiary Info Log: ", beneficiaryInfoTxnReciept);
+  // const beneficiaryInfoTxnReciept = await beneficiaryInfoTxn;
+  console.log("Beneficiary Info Log: ", beneficiaryInfoTxn);
 
   // -> To get the balance of the contract
   const getContractBalanceTxn = await vault.connect(signer1).getBalance();
-  const getContractBalanceTxnReciept = await getContractBalanceTxn;
-  console.log("Contract Balance Log: ", getContractBalanceTxnReciept);
+  // const getContractBalanceTxnReciept = await getContractBalanceTxn;
+  console.log("Contract Balance Log: ", getContractBalanceTxn);
 
 
   // -> get all beneficiary output
   const getAllBeneficiaryTxn = await vault.connect(signer1).getAllBeneficiary();
-  const getAllBeneficiaryTxnReciept = await getAllBeneficiaryTxn; 
-  console.log("Get all beneficiary Log: ", getAllBeneficiaryTxnReciept);
+  // const getAllBeneficiaryTxnReciept = await getAllBeneficiaryTxn; 
+  console.log("Get all beneficiary Log: ", getAllBeneficiaryTxn);
 
   
   // -> To get reverse the grant of a beneficiary
