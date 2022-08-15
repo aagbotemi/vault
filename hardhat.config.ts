@@ -12,12 +12,12 @@ type HardhatNetworkForkingUserConfig = any;
 const config: HardhatUserConfig = {
   solidity: "0.8.9",
   networks: {
-    hardhat: {
-      forking: {
-        // blockNumber: 123465434,
-        url: process.env.GOERLI_URL as HardhatNetworkForkingUserConfig | undefined
-      }
-    },
+    // hardhat: {
+    //   forking: {
+    //     blockNumber: 123465434,
+    //     url: process.env.GOERLI_URL as HardhatNetworkForkingUserConfig | undefined
+    //   }
+    // },
     goerli: {
       url: process.env.GOERLI_URL,
       accounts: [process.env.PRIVATE_KEY_1] as HttpNetworkAccountsUserConfig | undefined
